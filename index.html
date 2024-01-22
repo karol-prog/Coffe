@@ -14,16 +14,18 @@
     <!-- FIRST PAGE TO SEE -->
     <header class="header">
       <nav class="nav">
-        <div class="logo">
-          <a href="#">Coffe Hub<i class="fa-solid fa-mug-hot"></i></a>
-        </div>
-        <div class="menu">
-          <ul class="menu-list">
-            <li class="menu-links"><a href="#about">About Us</a></li>
-            <li class="menu-links"><a href="#rating">Ratings</a></li>
-            <li class="menu-links"><a href="#order">Order</a></li>
-            <li class="menu-links"><a href="contact">Contact</a></li>
-          </ul>
+        <div class="nav-container">
+          <div class="logo">
+            <a href="#">Coffe Hub<i class="fa-solid fa-mug-hot"></i></a>
+          </div>
+          <div class="menu">
+            <ul class="menu-list">
+              <li class="menu-links"><a href="#about">About Us</a></li>
+              <li class="menu-links"><a href="#rating">Ratings</a></li>
+              <li class="menu-links"><a href="#order">Order</a></li>
+              <li class="menu-links"><a href="contact">Contact</a></li>
+            </ul>
+          </div>
         </div>
       </nav>
       <div class="text-section">
@@ -58,7 +60,7 @@
       <section class="about-section" id="about">
         <h2 class="about-title">About us</h2>
 
-        <div class="products">
+        <div class="products-container">
           <figure class="card">
             <div class="img-container">
               <img
@@ -112,20 +114,83 @@
 
       <!-- SECTION 3 RECOMEND -->
       <section class="quote-section" id="testimonials">
-        <p class="quote">
-          Definitely the best coffee I have ever had. Whoever loves a specialty
-          coffee, that's the place to go to. Super friendly staff, very cozy
-          atmosphere. It's the highlight of the day as I grab a coffee (or two).
-          And don't forget to buy a cinnamon roll!
-        </p>
-        <div class="author-box">
-          <div class="author-img-container">
-            <img
-              class="quote-pic"
-              src="https://images.unsplash.com/photo-1518577915332-c2a19f149a75?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8"
-            />
+        <div class="quotes-container">
+          <p class="quote">
+            Definitely the best coffee I have ever had. Whoever loves a
+            specialty coffee, that's the place to go to. Super friendly staff,
+            very cozy atmosphere. It's the highlight of the day as I grab a
+            coffee (or two). And don't forget to buy a cinnamon roll!
+          </p>
+          <div class="author-box">
+            <div class="author-img-container">
+              <img
+                class="quote-pic"
+                src="https://images.unsplash.com/photo-1518577915332-c2a19f149a75?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8"
+              />
+            </div>
+            <span class="quote-author">Penny Lane</span>
           </div>
-          <span class="quote-author">Penny Lane</span>
+        </div>
+      </section>
+
+      <!-- SECTION 4 ORDER -->
+      <section class="order-section">
+        <div class="order-container">
+          <div class="order-text">
+            <h3>Take a coffe with you!</h3>
+            <p>Order coffe here <i class="fa-solid fa-arrow-right"></i></p>
+          </div>
+          <button class="btn">Order Now!</button>
+        </div>
+
+        <!-- ORDER BOX MENU POPOUT -->
+        <div class="order-box-menu">
+          <form action="#" class="order-form">
+            <i class="fa-solid fa-xmark"></i>
+            <h2>Place your order</h2>
+            <div class="form-info">
+              <label for="FirstName">First Name:</label>
+              <input type="text" placeholder="Enter your First Name" required />
+            </div>
+            <div class="form-info">
+              <label for="LastName">Last Name:</label>
+              <input type="text" placeholder="Enter your Last Name" required />
+            </div>
+            <div class="form-info">
+              <label for="email">Email:</label>
+              <input type="email" placeholder="Enter your email" required />
+            </div>
+            <div class="form-info">
+              <label for="phone">Phone number:</label>
+              <input
+                type="number"
+                placeholder="Enter your Phone number"
+                minlength="9"
+                max="12"
+                required
+              />
+            </div>
+            <h3>Choose your Coffe!</h3>
+            <div class="order-box-menu order-items">
+              <input type="checkbox" name="item1" id="Expresso" />
+              <label for="Expresso">Expresso</label><span>3.00€</span>
+              <div class="quantity">
+                <label for="expresso-amount">Quantity:</label
+                ><select name="expresso-quantity" id="expresso-quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+            </div>
+          </form>
         </div>
       </section>
     </main>
