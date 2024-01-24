@@ -14,18 +14,16 @@
     <!-- FIRST PAGE TO SEE -->
     <header class="header">
       <nav class="nav">
-        <div class="nav-container">
-          <div class="logo">
-            <a href="#">Coffe Hub<i class="fa-solid fa-mug-hot"></i></a>
-          </div>
-          <div class="menu">
-            <ul class="menu-list">
-              <li class="menu-links"><a href="#about">About Us</a></li>
-              <li class="menu-links"><a href="#rating">Ratings</a></li>
-              <li class="menu-links"><a href="#order">Order</a></li>
-              <li class="menu-links"><a href="contact">Contact</a></li>
-            </ul>
-          </div>
+        <div class="logo">
+          <a href="#">Coffe Hub<i class="fa-solid fa-mug-hot"></i></a>
+        </div>
+        <div class="menu">
+          <ul class="menu-list">
+            <li class="menu-links"><a href="#about">About Us</a></li>
+            <li class="menu-links"><a href="#rating">Ratings</a></li>
+            <li class="menu-links"><a href="#order">Order</a></li>
+            <li class="menu-links"><a href="contact">Contact</a></li>
+          </ul>
         </div>
       </nav>
       <div class="text-section">
@@ -39,11 +37,6 @@
             velvety smooth lattes to the bold, robust espressos, our menu is a
             celebration of coffee craftsmanship.
           </p>
-          <a href=""
-            ><button class="btn">
-              <span>Order now</span>
-            </button></a
-          >
         </div>
         <div class="text-img-container">
           <img
@@ -134,6 +127,88 @@
       </section>
 
       <!-- SECTION 4 ORDER -->
+      <section class="order-section">
+        <div class="order-tab">
+          <div class="order-text">
+            <h3>No time to sit?</h3>
+            <p>Order a coffe and take it with you!</p>
+          </div>
+          <button class="btn" id="order-btn">Order now!</button>
+        </div>
+        <!-- order pop out - dialog -->
+        <dialog class="order-pop-out">
+          <i class="fa-solid fa-xmark"></i>
+          <form class="form" method="dialog">
+            <!-- this method close order pop after fill the order and hit the order btn -->
+            <h2>Products to order</h2>
+            <div class="person-info">
+              <label for="firstname">First Name:</label>
+              <input type="text" required placeholder="Enter your first name" />
+            </div>
+            <div class="person-info">
+              <label for="lastname">Last Name:</label>
+              <input type="text" required placeholder="Enter your last name" />
+            </div>
+            <div class="person-info">
+              <label for="email">Email:</label>
+              <input type="email" required placeholder="Enter your email" />
+            </div>
+            <div class="person-info">
+              <label for="number">Phone:</label>
+              <input
+                type="number"
+                required
+                placeholder="Enter your phone number"
+                minlength="9"
+                maxlength="12"
+              />
+            </div>
+            <h3>Pick your favourite</h3>
+            <!-- PRODUCT PICKER -->
+            <div class="product-item">
+              <input type="checkbox" name="product" id="expresso" />
+              <label for="expresso">Expresso</label>
+              <span class="price">3.50€</span>
+              <div class="amount">
+                <label for="expresso" class="label-amount">Amount:</label>
+                <select name="expresso-amount" id="select-amount">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+            </div>
+            <div class="product-item">
+              <input type="checkbox" name="product" id="latte" />
+              <label for="latte">Latte</label>
+              <span class="price">3.00€</span>
+              <div class="amount">
+                <label for="latte" class="label-amount">Amount:</label>
+                <select name="latte-amount" id="select-amount">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+            </div>
+            <button class="btn btn-close-form">Order now!</button>
+          </form>
+        </dialog>
+      </section>
     </main>
   </body>
   <script src="script.js"></script>
