@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
     <script
       src="https://kit.fontawesome.com/18ed6a4e2f.js"
       crossorigin="anonymous"
@@ -12,17 +13,39 @@
   </head>
   <body>
     <!-- FIRST PAGE TO SEE -->
-    <header class="intro-page">
-      <nav class="navigation">
+    <header class="dark-bg">
+      <nav id="desktop-nav">
         <div class="logo">
           <a href="#">Coffe Hub<i class="fa-solid fa-mug-hot"></i></a>
         </div>
-        <ul class="menu-list">
-          <li class="menu-links"><a href="#about">About Us</a></li>
-          <li class="menu-links"><a href="#rating">Ratings</a></li>
-          <li class="menu-links"><a href="#order">Order</a></li>
-          <li class="menu-links"><a href="contact">Contact</a></li>
-        </ul>
+        <div>
+          <ul class="menu-list">
+            <li class="menu-links"><a href="#about">About Us</a></li>
+            <li class="menu-links"><a href="#rating">Ratings</a></li>
+            <li class="menu-links"><a href="#order">Order</a></li>
+            <li class="menu-links"><a href="contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- HAMBURGER NAV -->
+      <nav id="hamburger-nav">
+        <div class="logo">
+          <a href="#">Coffe Hub<i class="fa-solid fa-mug-hot"></i></a>
+        </div>
+        <div class="hamburger-menu">
+          <div class="nav-span-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu-list">
+            <li class="menu-links"><a href="#about">About Us</a></li>
+            <li class="menu-links"><a href="#rating">Ratings</a></li>
+            <li class="menu-links"><a href="#order">Order</a></li>
+            <li class="menu-links"><a href="contact">Contact</a></li>
+          </div>
+        </div>
       </nav>
       <div class="text-section">
         <div class="text-art">
@@ -135,8 +158,10 @@
         </div>
         <!-- order pop out - dialog -->
         <dialog class="order-pop-out">
-          <i class="fa-solid fa-xmark"></i>
-          <form class="form" method="dialog">
+          <div class="x-mark">
+            <i class="fa-solid fa-xmark" id="close-dialog"></i>
+          </div>
+          <form class="form" id="order-form" method="dialog">
             <!-- this method close order pop after fill the order and hit the order btn -->
             <h2>Products to order</h2>
             <div class="person-info">
@@ -227,6 +252,55 @@
           </form>
         </dialog>
       </section>
+
+      <!-- Contact -->
+      <section class="contact-section">
+        <h2>Where you can find us</h2>
+        <div class="contact-info">
+          <address>
+            <i class="fa-solid fa-house"></i>
+            <p><strong>Coffe hub</strong></p>
+            <p>2912 Washburn Street</p>
+            <p>70802 Louisiana, US</p>
+            <br />
+            <i class="fa-solid fa-phone"></i>
+            <a href="+44 (01554) 221745">+44 (01554) 221745</a>
+            <br />
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:coffehub@fakemail.com">coffehub@fakemail.com</a>
+          </address>
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d17209157.82655412!2d-62.31269503820194!3d-74.73635216165445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ssk!2ssk!4v1706283609445!5m2!1ssk!2ssk"
+              width="700"
+              height="400"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="dark-bg">
+        <div class="footer-text">
+          <p>
+            Copyright ©
+            <a href="https://www.theodinproject.com/" class="underline"
+              >The Odin Project</a
+            >
+            2023
+          </p>
+          <p>
+            Created by <i class="fa-solid fa-robot"></i>
+            <a href="https://github.com/karol-prog" class="underline"
+              >Karol Michalik</a
+            >
+          </p>
+        </div>
+      </footer>
     </main>
   </body>
   <script src="script.js"></script>
