@@ -1,4 +1,13 @@
 /* hamburger menu */
+const hamIcon = document.querySelector(".hamburger-icon");
+const hamMenuLinks = document.querySelector(".menu-ham-links");
+
+hamIcon.addEventListener("click", function () {
+  if (hamIcon === "click") {
+    hamMenuLinks.style.display = "block";
+  }
+});
+/* STICKY navigation */
 
 /* order pop out */
 const orderPop = document.querySelector(".order-pop-out");
