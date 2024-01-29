@@ -296,10 +296,6 @@ figcaption {
   background-color: var(--light-shade);
 }
 
-.quotes-container {
-  max-width: 1000px;
-}
-
 .quote {
   font-size: 2.25rem;
   font-weight: 300;
@@ -323,12 +319,6 @@ figcaption {
   overflow: hidden;
   border: 0.25em solid var(--accent);
   object-fit: cover;
-}
-
-.author-img-container {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
 }
 
 .author-img-container img {

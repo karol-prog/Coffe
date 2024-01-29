@@ -37,62 +37,65 @@ window.addEventListener("scroll", function () {
   }
 });
 
+/* NAV LINKS UNDERLINE UPDATES IN EACH SECTION */
+const sections = document.querySelectorAll("section");
+
+console.log(sections);
 /* RATINGS SECTION */
 const ratings = [
   {
-    name: "Penny Lane",
+    name: "Emily Johnson",
     quote:
       "Exceptional service and a delightful ambiance! The coffee here is a masterpiece, each cup brewed to perfection. My new favorite spot for a caffeine fix!",
     picture:
       "https://images.unsplash.com/photo-1518577915332-c2a19f149a75?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=562&q=80",
   },
   {
-    name: "Jim Knight",
+    name: "Liam Mitchell",
     quote:
       "Five stars are not enough for this coffee haven! The baristas are wizards, turning every order into a work of art. Impeccable taste and a cozy atmosphere make it a must-visit.",
     picture:
-      "https://images.unsplash.com/photo-1522556189639-b150ed9c4330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+      "https://images.unsplash.com/photo-1508341591423-4347099e1f19?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    name: "Amy Jones",
+    name: "Sophia Rodriguez",
     quote:
       "A hidden gem for coffee enthusiasts! The attention to detail in every cup is unparalleled. The staff's knowledge and passion for coffee shine through, creating an unforgettable experience.",
     picture:
       "https://images.unsplash.com/photo-1618298363483-e31a31f1a1e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80",
   },
   {
-    name: "Nick Baker",
+    name: "Ethan Thompson",
     quote:
       "Finally found my coffee sanctuary! The quality of beans, precision in brewing, and the warm, inviting atmosphere make this place stand out. Easily the best coffee shop in town!",
     picture:
-      "https://images.unsplash.com/photo-1484684096794-03e03b5e713e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
+      "https://images.unsplash.com/photo-1581803118522-7b72a50f7e9f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 
 const quote = document.querySelector(".quote");
 const quotePic = document.querySelector(".quote-pic");
 const quoteAuthor = document.querySelector(".quote-author");
-const quoteSection = document.querySelector(".quote-section");
 
-let slider = 0;
 let totalSlides = ratings.length;
+let slideToSee = 0; //tracking position in array
 
-/* add slider if slider are lower than lenght of ratings */
-function currentSlider() {
-  if (slider === totalSlides) {
-    slider = 0;
-  } else {
-    slider++;
+function newQuote() {
+  quote.textContent = ratings[slideToSee].quote;
+  quotePic.setAttribute("src", ratings[slideToSee].picture);
+  quoteAuthor.textContent = ratings[slideToSee].name;
+
+  // add value to slideToSee
+  slideToSee++;
+
+  // if slideToSee reach length of array make it again 0
+  if (slideToSee === totalSlides) {
+    slideToSee = 0;
   }
+  setTimeout(newQuote, 5000);
 }
-
-/*   setTimeout(() => {
-    quote.textContent = ratings[0].quote;
-    quotePic.textContent = ratings[0].picture;
-    quoteAuthor.textContent = ratings[0].name;
-  }, 5000);
-
-
+// Calling the function newQuote to be execute
+newQuote();
 
 /* ORDER MENU POP OUT */
 const orderPop = document.querySelector(".order-pop-out");
