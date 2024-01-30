@@ -39,8 +39,8 @@ window.addEventListener("scroll", function () {
 
 /* NAV LINKS UNDERLINE UPDATES IN EACH SECTION */
 const sections = document.querySelectorAll("section");
+const menuLinksa = document.querySelectorAll(".menu-list a, .menu-ham-links a"); //select all anchor in desktop and ham menu
 
-console.log(sections);
 /* RATINGS SECTION */
 const ratings = [
   {
@@ -98,16 +98,31 @@ function newQuote() {
 newQuote();
 
 /* ORDER MENU POP OUT */
-const orderPop = document.querySelector(".order-pop-out");
-const orderBtn = document.getElementById("order-btn");
-const closeOrderPop = document.getElementById("close-dialog");
+const orderBtn = document.getElementById("order-btn"); //btn for open dialog
+const orderPop = document.querySelector(".order-pop-out"); //dialog
+
+const closeOrderPop = document.getElementById("close-dialog"); //fa-xmark
+const closeOrderPopBtn = document.querySelector(".btn-close-form"); //btn inside dialog
+const formOrder = document.getElementById("order-form"); //form inside dialog
 
 orderBtn.addEventListener("click", function () {
   orderPop.showModal();
 });
 
+// reset the form
+function resetForm() {
+  formOrder.reset();
+}
+
+//after closing the orded dialog it will reset the from
 closeOrderPop.addEventListener("click", function () {
   orderPop.close();
+  resetForm();
+});
+
+closeOrderPopBtn.addEventListener("click", function () {
+  orderPop.close();
+  resetForm();
 });
 
 /* SCROLL UP BTN */
