@@ -5,6 +5,7 @@ const menuLinksAll = document.querySelectorAll(".menu-links");
 
 /* function for display menu links */
 hamIcon.addEventListener("click", function () {
+  hamIcon.classList.toggle("open"); //after click call this css class for show X
   if (hamMenuLinks.style.display === "block") {
     hamMenuLinks.style.display = "none";
   } else {
@@ -39,7 +40,26 @@ window.addEventListener("scroll", function () {
 
 /* NAV LINKS UNDERLINE UPDATES IN EACH SECTION */
 const sections = document.querySelectorAll("section");
-const menuLinksa = document.querySelectorAll(".menu-list a, .menu-ham-links a"); //select all anchor in desktop and ham menu
+const menuLinks = document.querySelectorAll(".menu-links a"); //select all anchor in desktop and ham
+
+window.addEventListener("scroll", function () {
+  let currentSection = "";
+
+  sections.forEach(function (section) {
+    if (window.scrollY >= section.offsetTop) {
+      currentSection = section.id; //add current section id to variable
+    }
+  });
+
+  menuLinks.forEach(function (link) {
+    if (link.href.includes(currentSection) && currentSection !== "") {
+      //each link include href of the id and the id is a not ""
+      link.classList.add("active"); // add class active
+    } else {
+      link.classList.remove("active");
+    }
+  });
+});
 
 /* RATINGS SECTION */
 const ratings = [

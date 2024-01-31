@@ -113,9 +113,12 @@ header {
   transform-origin: bottom right;
 }
 
-.menu-links a:hover:after,
-.menu-links a.active {
-  color: white;
+.menu-links a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.menu-links a.active:after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
@@ -166,6 +169,18 @@ header {
   height: 3px;
   border-radius: 1.5px;
   background-color: var(--accent);
+  transition: transform 300ms ease;
+}
+
+/* transform spans to X */
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 9px);
+}
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -9px);
 }
 
 .menu-ham-links {
