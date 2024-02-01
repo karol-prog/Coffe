@@ -6,4 +6,54 @@
   #hamburger-nav {
     display: flex;
   }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .text-section {
+    display: block;
+    text-align: center;
+    padding-block: 50px;
+  }
+
+  .text-desc {
+    margin-bottom: 20px;
+  }
+
+  .contact-section {
+    text-align: center;
+  }
+
+  .contact-info {
+    display: block;
+  }
+
+  .map {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .quote {
+    font-size: 1.5rem;
+  }
+
+  .author-img-container {
+    width: 90px;
+    height: 70px;
+  }
+
+  .order-tab {
+    display: block;
+    text-align: center;
+  }
+
+  .order-text {
+    margin: 20px auto;
+  }
+
+  .order-tab button {
+    margin: 10px auto;
+  }
 }
