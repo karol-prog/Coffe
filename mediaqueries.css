@@ -60,4 +60,45 @@
   .order-tab button {
     margin: 10px auto;
   }
+
+  .fa-xmark {
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .form {
+  }
+
+  .form h2,
+  h3 {
+  }
+
+  .person-info label {
+  }
+
+  .person-info input {
+  }
+
+  .product-item {
+  }
+
+  .product-item label {
+  }
+
+  .amount {
+  }
+
+  .amount select {
+  }
+}
+
+@media screen and (max-width: 425px) {
+  section {
+    padding: 5rem 6rem;
+  }
+
+  .author-img-container {
+    width: 60px;
+    height: 60px;
+  }
 }
