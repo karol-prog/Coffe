@@ -35,6 +35,10 @@
 }
 
 @media screen and (max-width: 425px) {
+  .up-btn {
+    left: 85%;
+  }
+
   .quote {
     font-size: 1.5rem;
   }

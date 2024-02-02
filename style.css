@@ -239,7 +239,7 @@ nav.sticky {
   align-items: center;
   position: fixed;
   top: 90%;
-  left: 95%;
+  left: 90%;
   width: 40px;
   height: 40px;
   border: 1px solid var(--dark-shade);
