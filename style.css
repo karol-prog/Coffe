@@ -23,7 +23,7 @@ section {
   display: grid;
   place-content: center;
   min-height: 100vh;
-  padding: 5rem 12rem; /*  13rem; */
+  /* padding: 5rem 13rem; */ /*  13rem; */
 }
 
 h2 {
@@ -195,7 +195,7 @@ nav.sticky {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  max-width: 80%;
+  max-width: 75%;
   margin-inline: auto;
   padding-block: 150px;
 }
@@ -260,11 +260,11 @@ nav.sticky {
 }
 
 /* ABOUT SECTION */
-.about-section {
+#about {
   background-color: var(--light);
 }
 
-.about-section h2 {
+#about h2 {
   padding-bottom: 2rem;
 }
 
@@ -340,27 +340,15 @@ figcaption {
 }
 
 .btn {
-  max-width: 500px;
-  background: var(--accent);
-  color: var(--dark-shade);
+  width: 50%;
   font-weight: 700;
   border: none;
-  padding: 10px 15px;
   border-radius: 10px;
+  padding: 10px 15px;
+  background: var(--accent);
+  color: var(--dark-shade);
   cursor: pointer;
-  transition: ease-out 300s;
-}
-
-.btn:hover {
-  border: var(--light-shade);
-  box-shadow: inset 200px 0 0 0 var(--light-shade);
-}
-
-.order-tab button {
-  min-width: 8rem;
-  margin-right: 5rem;
-  border: 2px solid var(--dark);
-  font-size: 1rem;
+  transition: all 300s ease;
 }
 
 /* Dialog section */
@@ -370,8 +358,8 @@ dialog {
   left: 50%;
   transform: translate(-50%, -50%);
   background: var(--dark-shade);
-  color: white;
-  border: 0.5px solid white;
+  color: var(--light);
+  border: 0.5px solid var(--light);
   border-radius: 20px;
 }
 
@@ -381,6 +369,10 @@ dialog {
   right: 20px;
   font-size: 2rem;
   cursor: pointer;
+}
+
+.fa-xmark:hover {
+  color: var(--accent);
 }
 
 .order-pop-out::backdrop {
@@ -393,17 +385,21 @@ dialog {
 }
 
 .form {
-  width: 400px;
+  max-width: 400px;
   min-height: 500px;
   margin: 20px;
   text-align: center;
 }
 
-.form h2,
-h3 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  text-decoration: underline;
+.form h2 {
+  font-size: 1.5rem;
+  margin: 20px auto;
+  color: var(--accent);
+}
+
+.form h3 {
+  margin: 20px auto;
+  color: var(--accent);
 }
 
 .person-info label {
@@ -429,6 +425,7 @@ h3 {
 .product-item label {
   font-weight: bold;
   padding-left: 10px;
+  color: var(--accent);
 }
 
 .amount {
@@ -441,44 +438,33 @@ h3 {
   width: 50px;
   border-radius: 10px;
   border: 0.5px solid var(--dark);
-  background: var(--light-shade);
-  color: var(--accent);
+  color: var(--dark);
 }
 
 /* Contact section */
-.contact-section {
+#contact {
   min-height: 100vh;
   background: var(--light);
 }
 
-.contact-section h2 {
+#contact h2 {
   text-align: center;
   margin-bottom: 2rem;
 }
 
 .contact-info {
+  border: 1px solid black;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  gap: 3rem;
-  /* min-width: 80%; */
+  gap: 10rem;
+  min-height: 250px;
   color: var(--dark-shade);
   line-height: 25px;
 }
 
 .contact-info i {
   color: var(--accent);
-}
-
-.map {
-  flex-grow: 2;
-}
-
-.map iframe {
-  width: 100%;
-  /* min-width: 15rem; */
-  min-height: 25rem;
 }
 
 /* FOOTER */
