@@ -48,6 +48,10 @@
   .map {
     margin-top: 20px;
   }
+
+  .up-btn {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -95,6 +99,16 @@
 
   nav.sticky {
     padding-inline: 50px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  nav.sticky {
+    padding-inline: 40px;
+  }
+
+  .contact-info {
+    width: 300px;
   }
 }
 

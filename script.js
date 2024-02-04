@@ -151,16 +151,18 @@ const scrollBtn = document.querySelector(".up-btn");
 
 /* btn show after 100px of scroll */
 window.addEventListener("scroll", function () {
-  if (window.scrollY > 100) {
+  if (window.scrollY > 200) {
     scrollBtn.classList.add("show");
   } else {
     scrollBtn.classList.remove("show");
   }
 
-  scrollBtn.addEventListener("click", function () {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+  scrollBtn.addEventListener("click", () => {
+    document.documentElement.scrollTop = 0;
+  });
+
+  scrollBtn.addEventListener("touchstart", () => {
+    document.documentElement.scrollTop = 0;
+    scrollBtn.classList.remove("show");
   });
 });
