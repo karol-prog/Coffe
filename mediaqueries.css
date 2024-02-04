@@ -92,6 +92,10 @@
   .btn-close-form {
     margin-bottom: 20px;
   }
+
+  nav.sticky {
+    padding-inline: 50px;
+  }
 }
 
 @media screen and (max-width: 320px) {
@@ -100,5 +104,13 @@
     height: 300px;
     margin: 40px;
     text-align: center;
+  }
+
+  nav.sticky {
+    padding-inline: 30px;
+  }
+
+  .contact-info {
+    width: 250px;
   }
 }

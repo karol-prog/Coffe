@@ -13,10 +13,11 @@ hamIcon.addEventListener("click", function () {
   }
 });
 
-/* after clicking on some link close ham menu */
+/* after clicking on some link close ham menu and change a ham icon form x to spans*/
 menuLinksAll.forEach(function (link) {
   link.addEventListener("click", function () {
     hamMenuLinks.style.display = "none";
+    hamIcon.classList.toggle("open");
   });
 });
 
@@ -29,7 +30,7 @@ const mainPos = main.getBoundingClientRect().top;
 
 window.addEventListener("scroll", function () {
   let scrollPos = window.scrollY;
-  if (scrollPos >= mainPos) {
+  if (scrollPos >= mainPos - 20) {
     desktopNavbar.classList.add("sticky");
     hamburgerNavbar.classList.add("sticky");
   } else {
@@ -46,7 +47,7 @@ window.addEventListener("scroll", function () {
   let currentSection = "";
 
   sections.forEach(function (section) {
-    if (window.scrollY >= section.offsetTop) {
+    if (window.scrollY >= section.offsetTop - 20) {
       currentSection = section.id; //add current section id to variable
     }
   });
