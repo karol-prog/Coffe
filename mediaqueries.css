@@ -92,9 +92,13 @@
   .btn-close-form {
     margin-bottom: 20px;
   }
+}
 
-  /* .map iframe {
-    width: 300px;
-    min-height: 10rem;
-  } */
+@media screen and (max-width: 320px) {
+  .form {
+    width: 200px;
+    height: 300px;
+    margin: 40px;
+    text-align: center;
+  }
 }
