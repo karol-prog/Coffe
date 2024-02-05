@@ -149,7 +149,7 @@ closeOrderPopBtn.addEventListener("click", function () {
 /* SCROLL UP BTN */
 const scrollBtn = document.querySelector(".up-btn");
 
-/* btn show after 100px of scroll */
+// btn show after 200px of scroll
 window.addEventListener("scroll", function () {
   if (window.scrollY > 200) {
     scrollBtn.classList.add("show");
@@ -157,12 +157,8 @@ window.addEventListener("scroll", function () {
     scrollBtn.classList.remove("show");
   }
 
-  scrollBtn.addEventListener("click", () => {
+  //after click on up btn scroll to top of the page
+  scrollBtn.addEventListener("click", function () {
     document.documentElement.scrollTop = 0;
-  });
-
-  scrollBtn.addEventListener("touchstart", () => {
-    document.documentElement.scrollTop = 0;
-    scrollBtn.classList.remove("show");
   });
 });
