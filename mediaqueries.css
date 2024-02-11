@@ -100,11 +100,26 @@
   nav.sticky {
     padding-inline: 50px;
   }
+
+  .person-info {
+    margin-bottom: 10px;
+  }
+
+  .person-info label {
+    padding-bottom: 10px;
+  }
 }
 
 @media screen and (max-width: 375px) {
   nav.sticky {
     padding-inline: 40px;
+  }
+  .person-info {
+    margin-bottom: 10px;
+  }
+
+  .person-info label {
+    padding-bottom: 10px;
   }
 
   .contact-info {
