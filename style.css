@@ -323,6 +323,21 @@ dialog {
   color: var(--dark);
 }
 
+/* dialog order after sumbiting the form */
+.thank-order {
+  margin-top: 60px;
+}
+
+.thank-text {
+  padding: 20px;
+}
+
+.coffee-gif {
+  width: 100%;
+  margin-top: 30px;
+  border-radius: 20px;
+}
+
 .up-btn {
   display: flex;
   justify-content: center;

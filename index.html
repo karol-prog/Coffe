@@ -69,24 +69,44 @@
             <h2>Products to order</h2>
             <div class="person-info">
               <label for="firstname">First Name:</label>
-              <input type="text" required placeholder="Enter your first name" />
+              <input 
+                type="text" 
+                name="firstname"
+                id="firstname" 
+                placeholder="Enter your first name"
+                required
+                 />
             </div>
             <div class="person-info">
               <label for="lastname">Last Name:</label>
-              <input type="text" required placeholder="Enter your last name" />
+              <input 
+                type="text" 
+                name="lastname"
+                id="lastname"   
+                placeholder="Enter your last name" 
+                required
+                />
             </div>
             <div class="person-info">
               <label for="email">Email:</label>
-              <input type="email" required placeholder="Enter your email" />
+              <input 
+                type="email" 
+                name="email"
+                id="email" 
+                placeholder="Enter your email" 
+                required
+                />
             </div>
             <div class="person-info">
-              <label for="number">Phone:</label>
+              <label for="phonenumber">Phone:</label>
               <input
                 type="number"
-                required
+                name="phonenumber"
+                id="phonenumber"
                 placeholder="Enter your phone number"
                 minlength="9"
                 maxlength="12"
+                required
               />
             </div>
             <h3>Pick your favourite</h3>
@@ -151,7 +171,7 @@
                 </select>
               </div>
             </div>
-            <button class="btn btn-close-form">Order now!</button>
+            <button type="submit" class="btn btn-close-form">Order now!</button>
           </form>
         </dialog>
         </div>

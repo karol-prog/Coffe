@@ -124,6 +124,14 @@
     padding-inline: 30px;
   }
 
+  .person-info {
+    margin-bottom: 10px;
+  }
+
+  .person-info label {
+    padding-bottom: 10px;
+  }
+
   .contact-info {
     width: 250px;
   }

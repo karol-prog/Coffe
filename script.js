@@ -131,19 +131,50 @@ orderBtn.addEventListener("click", function () {
 });
 
 // reset the form
-function resetForm() {
+/* function resetForm() {
   formOrder.reset();
-}
+} */
 
 //after closing the orded dialog it will reset the from
 closeOrderPop.addEventListener("click", function () {
   orderPop.close();
-  resetForm();
 });
 
 closeOrderPopBtn.addEventListener("click", function () {
-  orderPop.close();
-  resetForm();
+  /* orderPop.close(); */
+});
+
+//ordere form store data to storage
+formOrder.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const newOrderData = new FormData(formOrder);
+
+  /* const firstName = newOrderData.get("firstname");
+  const lastName = newOrderData.get("lastname");
+  const email = newOrderData.get("email");
+  const phone = newOrderData.get("phonenumber");
+  const product = newOrderData.get("product");
+
+  console.log(firstName, lastName, email, phone, product); */
+
+  for (item of newOrderData) {
+    console.log(item[0], item[1]);
+  }
+
+  formOrder.innerHTML = `
+      <div class="thank-order">
+        <h2 class="thank-text"> Thank you for your order </h2>
+        <p>Your order will be ready after 5 minutes</p>
+        <img class="coffee-gif" src='gif/coffe.gif'>
+      </div>
+        `;
+
+  setTimeout(function () {
+    orderPop.close();
+  }, 5000);
+
+  formOrder.reset();
 });
 
 /* SCROLL UP BTN */
