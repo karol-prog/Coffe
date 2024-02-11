@@ -16,6 +16,7 @@ Welcome to Coffe Hub. This website is for no realistic coffee shop, where you ca
 - Changing a few ratings after some time
 - Simple order menu for your favourite coffee
 - Scroll up button only for desktop devices
+- Storing the form data and console logging it for employees to make a coffee order
 
 
 ## Technologies Used
@@ -24,13 +25,13 @@ This website is built by using the following technologies:
 - HTML
 - CSS
 - JavaScript
-## What i Learned
+## What I Learned
 
 This solo project reinforced my knowledge mainly of JavaScript for implementing interesting features to the website and also to get strong fundamentals in HTML and CSS.
 
 - Complex structure HTML
 - CSS for responsive design and also for JavaScript features
-- Implement JavaScript function, if else statements, objects, timeout method, and update the DOM
+- Implement JavaScript function, if-else statements, objects, timeout method, and update the DOM
 ## Live Preview
 
 https://karol-coffeehub.netlify.app/
