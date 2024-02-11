@@ -126,56 +126,46 @@ const closeOrderPop = document.getElementById("close-dialog"); //fa-xmark
 const closeOrderPopBtn = document.querySelector(".btn-close-form"); //btn inside dialog
 const formOrder = document.getElementById("order-form"); //form inside dialog
 
+//btn for open the order pop-out menu
 orderBtn.addEventListener("click", function () {
   orderPop.showModal();
 });
 
-// reset the form
-/* function resetForm() {
-  formOrder.reset();
-} */
-
-//after closing the orded dialog it will reset the from
+//x-mark closing form
 closeOrderPop.addEventListener("click", function () {
   orderPop.close();
 });
 
-closeOrderPopBtn.addEventListener("click", function () {
-  /* orderPop.close(); */
-});
-
-//ordere form store data to storage
+//order form store data to console
 formOrder.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  const newOrderData = new FormData(formOrder);
+  const newOrderData = new FormData(formOrder); //store a form data to variable
 
-  /* const firstName = newOrderData.get("firstname");
-  const lastName = newOrderData.get("lastname");
-  const email = newOrderData.get("email");
-  const phone = newOrderData.get("phonenumber");
-  const product = newOrderData.get("product");
-
-  console.log(firstName, lastName, email, phone, product); */
-
+  // for loop for every item in newOrderData and console log the key and value of item
   for (item of newOrderData) {
     console.log(item[0], item[1]);
   }
 
+  // Create a div for the thank you message
   formOrder.innerHTML = `
-      <div class="thank-order">
-        <h2 class="thank-text"> Thank you for your order </h2>
-        <p>Your order will be ready after 5 minutes</p>
-        <img class="coffee-gif" src='gif/coffe.gif'>
-      </div>
-        `;
+    <div class="thank-order">
+      <h2 class="thank-text"> Thank you for your order </h2>
+      <p>Your order will be ready after 5 minutes</p>
+      <img class="coffee-gif" src='gif/coffe.gif'>
+    </div>
+   `;
 
+  // Reset the form after 5 seconds
   setTimeout(function () {
-    orderPop.close();
+    orderPop.close(); // close the dialog
+    formOrder.reset(); //reset the form
+    formOrder.innerHTML = originalFormHTML; //after ordering make a form back to default
   }, 5000);
-
-  formOrder.reset();
 });
+
+//variable for original html element of dialog form
+const originalFormHTML = formOrder.innerHTML;
 
 /* SCROLL UP BTN */
 const scrollBtn = document.querySelector(".up-btn");

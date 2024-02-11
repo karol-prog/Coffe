@@ -338,6 +338,7 @@ dialog {
   border-radius: 20px;
 }
 
+/* scroll up btn */
 .up-btn {
   display: flex;
   justify-content: center;
